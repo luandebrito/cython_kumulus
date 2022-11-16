@@ -58,7 +58,7 @@ cpdef str gstreamer_pipeline(int sensor_id = 1, int capture_width = 4032, int ca
 
 ###################################
 ## Image threatment
-cpdef void imageThreat(LC_image, float LC_timestamp, float LC_startTime, str LC_camText):
+cpdef void imageThreat(LC_image, double LC_timestamp, double LC_startTime, str LC_camText):
     tempFile = BytesIO(imencode(".jpeg", LC_image)[1]).read().decode('latin-1')
     print('{} - {}'.format(LC_camText, time() - LC_startTime))
     return
@@ -100,12 +100,12 @@ cpdef void mainLoop():
     cdef float averageFrameRate = 30
 
     ## Time Rate
-    cdef float timeRate = 1/frameRate
+    cdef double timeRate = 1/frameRate
 
-    cdef float startTime
-    cdef float timeDiff
-    cdef float endTime
-    cdef float currentFrameRate
+    cdef double startTime
+    cdef double timeDiff
+    cdef double endTime
+    cdef double currentFrameRate
 
     ## Infinite Loop
     while True:
