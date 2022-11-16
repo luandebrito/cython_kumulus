@@ -60,7 +60,7 @@ cpdef str gstreamer_pipeline(int sensor_id = 1, int capture_width = 4032, int ca
 ## Image threatment
 cpdef void imageThreat(LC_image, float LC_timestamp, float LC_startTime, str LC_camText):
     tempFile = BytesIO(imencode(".jpeg", LC_image)[1]).read().decode('latin-1')
-    print(f'{LC_camText} - {time() - LC_startTime}')
+    print('{} - {}'.format(LC_camText, time() - LC_startTime))
     return
 ###################################
 
@@ -75,7 +75,7 @@ cpdef void mainLoop():
 
     ## Create Thread pool for image threat
     imageThreat_threadPool_0 = ThreadPool(1)
-    imageThreat_threadPool_1 = ThreadPool(20)
+    imageThreat_threadPool_1 = ThreadPool(18)
 
     ## Set framerate
     cdef int frameRate = 16
@@ -115,7 +115,7 @@ cpdef void mainLoop():
         ## Send to thread or process normal
         if useThreads:
             ## Send CAM0
-            imageThreat_threadPool_0.apipe(imageThreat, cam0.read()[1].copy(), time(), startTime, camText0)
+            imageThreat_threadPool_1.apipe(imageThreat, cam0.read()[1].copy(), time(), startTime, camText0)
         else:
             ## Send CAM0
             imageThreat(cam0.read()[1], time(), startTime, camText0)
