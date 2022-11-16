@@ -1360,7 +1360,7 @@ static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 static int __pyx_v_27LIBvideoCapture_2cameras_V2_useThreads;
 static PyObject *__pyx_v_27LIBvideoCapture_2cameras_V2_GB_jetsonNumber = 0;
 static PyObject *__pyx_f_27LIBvideoCapture_2cameras_V2_gstreamer_pipeline(int __pyx_skip_dispatch, struct __pyx_opt_args_27LIBvideoCapture_2cameras_V2_gstreamer_pipeline *__pyx_optional_args); /*proto*/
-static void __pyx_f_27LIBvideoCapture_2cameras_V2_imageThreat(PyObject *, double, double, PyObject *, int __pyx_skip_dispatch); /*proto*/
+static void __pyx_f_27LIBvideoCapture_2cameras_V2_imageThreat(PyObject *, float, float, PyObject *, int __pyx_skip_dispatch); /*proto*/
 static void __pyx_f_27LIBvideoCapture_2cameras_V2_mainLoop(int __pyx_skip_dispatch); /*proto*/
 #define __Pyx_MODULE_NAME "LIBvideoCapture_2cameras_V2"
 extern int __pyx_module_is_main_LIBvideoCapture_2cameras_V2;
@@ -1485,7 +1485,7 @@ static PyObject *__pyx_n_s_threading;
 static PyObject *__pyx_n_s_time;
 static PyObject *__pyx_kp_u_video_x_raw_width_int;
 static PyObject *__pyx_pf_27LIBvideoCapture_2cameras_V2_gstreamer_pipeline(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_sensor_id, int __pyx_v_capture_width, int __pyx_v_capture_height, int __pyx_v_display_width, int __pyx_v_display_height, int __pyx_v_framerate, int __pyx_v_flip_method); /* proto */
-static PyObject *__pyx_pf_27LIBvideoCapture_2cameras_V2_2imageThreat(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_LC_image, double __pyx_v_LC_timestamp, double __pyx_v_LC_startTime, PyObject *__pyx_v_LC_camText); /* proto */
+static PyObject *__pyx_pf_27LIBvideoCapture_2cameras_V2_2imageThreat(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_LC_image, float __pyx_v_LC_timestamp, float __pyx_v_LC_startTime, PyObject *__pyx_v_LC_camText); /* proto */
 static PyObject *__pyx_pf_27LIBvideoCapture_2cameras_V2_4mainLoop(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
 static PyObject *__pyx_int_1;
 static PyObject *__pyx_int_20;
@@ -1923,13 +1923,13 @@ static PyObject *__pyx_pf_27LIBvideoCapture_2cameras_V2_gstreamer_pipeline(CYTHO
 /* "LIBvideoCapture_2cameras_V2.pyx":61
  * ###################################
  * ## Image threatment
- * cpdef void imageThreat(LC_image, double LC_timestamp, double LC_startTime, str LC_camText):             # <<<<<<<<<<<<<<
+ * cpdef void imageThreat(LC_image, float LC_timestamp, float LC_startTime, str LC_camText):             # <<<<<<<<<<<<<<
  *     tempFile = BytesIO(imencode(".jpeg", LC_image)[1]).read().decode('latin-1')
  *     print(f'{LC_camText} - {time() - LC_startTime}')
  */
 
 static PyObject *__pyx_pw_27LIBvideoCapture_2cameras_V2_3imageThreat(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static void __pyx_f_27LIBvideoCapture_2cameras_V2_imageThreat(PyObject *__pyx_v_LC_image, CYTHON_UNUSED double __pyx_v_LC_timestamp, double __pyx_v_LC_startTime, PyObject *__pyx_v_LC_camText, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static void __pyx_f_27LIBvideoCapture_2cameras_V2_imageThreat(PyObject *__pyx_v_LC_image, CYTHON_UNUSED float __pyx_v_LC_timestamp, float __pyx_v_LC_startTime, PyObject *__pyx_v_LC_camText, CYTHON_UNUSED int __pyx_skip_dispatch) {
   CYTHON_UNUSED PyObject *__pyx_v_tempFile = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -1950,7 +1950,7 @@ static void __pyx_f_27LIBvideoCapture_2cameras_V2_imageThreat(PyObject *__pyx_v_
 
   /* "LIBvideoCapture_2cameras_V2.pyx":62
  * ## Image threatment
- * cpdef void imageThreat(LC_image, double LC_timestamp, double LC_startTime, str LC_camText):
+ * cpdef void imageThreat(LC_image, float LC_timestamp, float LC_startTime, str LC_camText):
  *     tempFile = BytesIO(imencode(".jpeg", LC_image)[1]).read().decode('latin-1')             # <<<<<<<<<<<<<<
  *     print(f'{LC_camText} - {time() - LC_startTime}')
  *     return
@@ -2063,7 +2063,7 @@ static void __pyx_f_27LIBvideoCapture_2cameras_V2_imageThreat(PyObject *__pyx_v_
   __pyx_t_1 = 0;
 
   /* "LIBvideoCapture_2cameras_V2.pyx":63
- * cpdef void imageThreat(LC_image, double LC_timestamp, double LC_startTime, str LC_camText):
+ * cpdef void imageThreat(LC_image, float LC_timestamp, float LC_startTime, str LC_camText):
  *     tempFile = BytesIO(imencode(".jpeg", LC_image)[1]).read().decode('latin-1')
  *     print(f'{LC_camText} - {time() - LC_startTime}')             # <<<<<<<<<<<<<<
  *     return
@@ -2135,7 +2135,7 @@ static void __pyx_f_27LIBvideoCapture_2cameras_V2_imageThreat(PyObject *__pyx_v_
   /* "LIBvideoCapture_2cameras_V2.pyx":61
  * ###################################
  * ## Image threatment
- * cpdef void imageThreat(LC_image, double LC_timestamp, double LC_startTime, str LC_camText):             # <<<<<<<<<<<<<<
+ * cpdef void imageThreat(LC_image, float LC_timestamp, float LC_startTime, str LC_camText):             # <<<<<<<<<<<<<<
  *     tempFile = BytesIO(imencode(".jpeg", LC_image)[1]).read().decode('latin-1')
  *     print(f'{LC_camText} - {time() - LC_startTime}')
  */
@@ -2160,8 +2160,8 @@ static void __pyx_f_27LIBvideoCapture_2cameras_V2_imageThreat(PyObject *__pyx_v_
 static PyObject *__pyx_pw_27LIBvideoCapture_2cameras_V2_3imageThreat(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
 static PyObject *__pyx_pw_27LIBvideoCapture_2cameras_V2_3imageThreat(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_LC_image = 0;
-  double __pyx_v_LC_timestamp;
-  double __pyx_v_LC_startTime;
+  float __pyx_v_LC_timestamp;
+  float __pyx_v_LC_startTime;
   PyObject *__pyx_v_LC_camText = 0;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -2223,8 +2223,8 @@ static PyObject *__pyx_pw_27LIBvideoCapture_2cameras_V2_3imageThreat(PyObject *_
       values[3] = PyTuple_GET_ITEM(__pyx_args, 3);
     }
     __pyx_v_LC_image = values[0];
-    __pyx_v_LC_timestamp = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_LC_timestamp == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 61, __pyx_L3_error)
-    __pyx_v_LC_startTime = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_LC_startTime == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 61, __pyx_L3_error)
+    __pyx_v_LC_timestamp = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_LC_timestamp == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 61, __pyx_L3_error)
+    __pyx_v_LC_startTime = __pyx_PyFloat_AsFloat(values[2]); if (unlikely((__pyx_v_LC_startTime == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 61, __pyx_L3_error)
     __pyx_v_LC_camText = ((PyObject*)values[3]);
   }
   goto __pyx_L4_argument_unpacking_done;
@@ -2247,7 +2247,7 @@ static PyObject *__pyx_pw_27LIBvideoCapture_2cameras_V2_3imageThreat(PyObject *_
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_27LIBvideoCapture_2cameras_V2_2imageThreat(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_LC_image, double __pyx_v_LC_timestamp, double __pyx_v_LC_startTime, PyObject *__pyx_v_LC_camText) {
+static PyObject *__pyx_pf_27LIBvideoCapture_2cameras_V2_2imageThreat(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_LC_image, float __pyx_v_LC_timestamp, float __pyx_v_LC_startTime, PyObject *__pyx_v_LC_camText) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2310,7 +2310,6 @@ static void __pyx_f_27LIBvideoCapture_2cameras_V2_mainLoop(CYTHON_UNUSED int __p
   int __pyx_t_10;
   PyObject *__pyx_t_11 = NULL;
   PyObject *__pyx_t_12 = NULL;
-  double __pyx_t_13;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -2878,9 +2877,9 @@ static void __pyx_f_27LIBvideoCapture_2cameras_V2_mainLoop(CYTHON_UNUSED int __p
       if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 121, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-      __pyx_t_13 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_13 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 121, __pyx_L1_error)
+      __pyx_t_9 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_9 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 121, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_f_27LIBvideoCapture_2cameras_V2_imageThreat(__pyx_t_2, __pyx_t_13, __pyx_v_startTime, __pyx_v_camText0, 0);
+      __pyx_f_27LIBvideoCapture_2cameras_V2_imageThreat(__pyx_t_2, __pyx_t_9, __pyx_v_startTime, __pyx_v_camText0, 0);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
     __pyx_L5:;
@@ -3082,9 +3081,9 @@ static void __pyx_f_27LIBvideoCapture_2cameras_V2_mainLoop(CYTHON_UNUSED int __p
       if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 130, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-      __pyx_t_13 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_13 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 130, __pyx_L1_error)
+      __pyx_t_9 = __pyx_PyFloat_AsFloat(__pyx_t_2); if (unlikely((__pyx_t_9 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 130, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_f_27LIBvideoCapture_2cameras_V2_imageThreat(__pyx_t_1, __pyx_t_13, __pyx_v_startTime, __pyx_v_camText1, 0);
+      __pyx_f_27LIBvideoCapture_2cameras_V2_imageThreat(__pyx_t_1, __pyx_t_9, __pyx_v_startTime, __pyx_v_camText1, 0);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     }
     __pyx_L6:;
